@@ -14,4 +14,5 @@ CMD ["/venv/bin/pytest"]
 
 FROM python:3.7-slim-stretch AS production
 COPY --from=build /venv /venv
+EXPOSE 5000
 CMD ["/venv/bin/python3", "-m", "myproject"]
