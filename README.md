@@ -13,5 +13,5 @@ To build and run the production image:
 
 To build and run the development image:
 
-	$ docker build --target=development -t myproject-dev .
-	$ docker run --rm -it myproject-dev
+	$ docker build --target=build --build-arg REQS=dev -t myproject-dev .
+	$ docker run --rm -it myproject-dev /venv/bin/pytest /project/tests

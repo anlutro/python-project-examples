@@ -1,15 +1,11 @@
 FROM python:3.7-stretch AS build
-RUN python3 -m venv /venv
+RUN python3 -m venv /venv && /venv/bin/pip install -U pip setuptools
 ADD ./requirements /project/requirements
-RUN /venv/bin/pip install -r /project/requirements/base.txt
+ARG REQS=base
+RUN /venv/bin/pip install -r /project/requirements/$REQS.txt
 ADD . /project
 RUN /venv/bin/pip install /project
-
-
-FROM build AS development
-RUN /venv/bin/pip install -r /project/requirements/dev.txt
 WORKDIR /project
-CMD ["/venv/bin/pytest"]
 
 
 FROM python:3.7-slim-stretch AS production
