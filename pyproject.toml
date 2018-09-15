@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "myproject"
+description = "example project"
+authors = ["Andreas Lutro <anlutro@gmail.com>"]
+version = "0.1"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+flask = "^1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-flask = "*"
