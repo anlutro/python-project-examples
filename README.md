@@ -15,6 +15,6 @@ Create a virtualenv for the project, activate it, and install the package and it
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements/dev.txt
+pip install -e . -r requirements/dev.txt
 python -m myproject
 ```
