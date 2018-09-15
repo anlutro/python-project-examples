@@ -1,2 +1,5 @@
+-e .
+-r base.txt
+
 pytest
 pytest-flask
