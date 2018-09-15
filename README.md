@@ -1,4 +1,8 @@
-# Python Docker multi-stage example
+# Python project example(s)
+
+Check out the different branches for different variations!
+
+### Docker multi-stage builds
 
 An example implementation of the structure outlined in my blog post here: https://www.lutro.me/posts/python-docker-multi-stage-builds
 
