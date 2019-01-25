@@ -8,10 +8,10 @@ An example implementation of the structure outlined in my blog post here: https:
 
 To build and run the production image:
 
-	$ docker build -t myproject .
-	$ docker run --rm -it -p5000:5000 myproject
+    $ docker build -t myproject .
+    $ docker run --rm -it -p5000:5000 myproject
 
 To build and run the development image:
 
-	$ docker build --target=build --build-arg REQS=dev -t myproject-dev .
-	$ docker run --rm -it myproject-dev /venv/bin/pytest /project/tests
+    $ docker build --target=build --build-arg REQS=dev -t myproject-dev .
+    $ docker run --rm -it myproject-dev /venv/bin/pytest /project/tests
